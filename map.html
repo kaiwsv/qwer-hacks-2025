@@ -3,25 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessibility Map</title>
+  <title>UCLA Accessibility Map</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Load the ArcGIS Embeddable Map Component -->
+  <script type="module" src="https://js.arcgis.com/embeddable-components/4.31/arcgis-embeddable-components.esm.js"></script>
 </head>
 <body>
-    <header class="pinned-header">
+  <header class="pinned-header">
+    <img src="images/header.png" alt="Custom Header" class="header-image">
+    <!-- Leftmost Larger Button (Home Link) -->
+    <a href="index.html" class="button-area large-button">All Ways Safe</a>
 
-        <img src="images/header.png" alt="Custom Header" class="header-image">
-        <!-- Leftmost Larger Button (Home Link) -->
-        <a href="index.html" class="button-area large-button">All Ways Safe</a>
-      
-        <!-- Navigation Buttons -->
-        <nav class="nav-buttons">
-          <a href="map-selection" class="button-area button1">Accessibility Map</a>
-          <a href="safe-spaces" class="button-area button2">Safe Spaces</a>
-          <a href="about" class="button-area button3">About Our Mission</a>
-          <a href="resources" class="button-area button4">Resources</a>
-          <a href="contact" class="button-area button5 button-contact">Contact Us</a>
-        </nav>
-      </header>
-      <div class="content-wrapper map-page"></div>
+    <!-- Navigation Buttons -->
+    <nav class="nav-buttons">
+      <a href="map-selection.html" class="button-area button1">Accessibility Map</a>
+      <a href="safe-spaces.html" class="button-area button2">Safe Spaces</a>
+      <a href="about.html" class="button-area button3">About Our Mission</a>
+      <a href="resources.html" class="button-area button4">Resources</a>
+      <a href="contact.html" class="button-area button5 button-contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="content-wrapper">
+    <p>
+      The interactive map below provides information about accessibility features across UCLA. Use this tool to explore accessibility routes, parking, and building features designed to support the UCLA community.
+    </p>
+
+    <!-- Embed ArcGIS Map -->
+    <arcgis-embedded-map
+      style="height:600px;width:100%;"
+      item-id="ad971bca71dd4a1cb463c69ca839613e"
+      theme="light"
+      portal-url="https://gisucla.maps.arcgis.com"
+      bookmarks-enabled
+      heading-enabled
+      legend-enabled
+      information-enabled
+      share-enabled>
+    </arcgis-embedded-map>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 All Ways Safe</p>
+  </footer>
 </body>
 </html>
