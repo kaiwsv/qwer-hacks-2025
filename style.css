@@ -1,3 +1,4 @@
+/* MAIN PAGE */
 /* General Reset */
 * {
     margin: 0;
@@ -16,28 +17,120 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 125px; /* Adjust to match your header height */
+    height: 100px; /* Adjust to match your header height */
     z-index: 1000; /* Keep the header above all content */
     background-color: var(--fallback-color); /* Use fallback color */
+
+      /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
   }
   
   .header-image {
     width: 100%;
-    height: 100%; /* Ensures the header image fills the space */
     object-fit: cover; /* Maintain image aspect ratio */
   }
+
+  /* General Header Buttons */
+.button-area {
+    /* display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem; Standard text size */
+    position: absolute;
+    top: 43%;
+    color:transparent; /* Text color (dark gray) */
+    margin: 0 15px; /* Add spacing between buttons */
+    padding: 20px 70px; /* Add padding to the clickable area */
+    /* border: 1px solid #000000; Invisible border by default */
+    border-radius: 5px; /* Add slight rounding to the edges */
+    background-color:transparent; /* Fully transparent background */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+
+  .button1 {
+    right: 49.5%;
+    padding: 20px 50px;
+  }
+
+  .button2 {
+    right: 39%;
+    padding: 20px 45px;
+  }
+
+  .button3 {
+    right: 25%;
+    padding: 20px 50px;
+  }
+
+  .button4 {
+    right: 15%;
+    padding: 20px 50px;
+  }
+
+  .button5 {
+    right: 5%;
+    padding: 22px 50px;
+  }
+  
+  /* Larger Button on Left (Home links) */
+.large-button {
+    /* font-family: 'Georgia', serif; */
+    /* font-size: 1.8rem; Increase font size */
+    /* font-weight: bold; Bold font for emphasis */
+    position:absolute;
+    top: 24%;
+    left: 4%;
+    color: transparent; /* Green text color */
+    margin-right: 20px; /* Space between the left button and navigation items */
+    padding: 40px 120px; /* Add padding for clickable area */
+    background-color: transparent; /* Keep background transparent */
+    border: 1px solid transparent; /* Add hover effect below */
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
   
   /* Main Content Styling */
   .content-wrapper {
     position: relative;
     min-height: 250vh; /* Example: Makes the page taller for scrolling */
     width: 100%;
-    background-image: url("images/home-page.png"); /* URL of the image */
     background-color: var(--fallback-color); /* Match fallback color */
     background-size: cover; /* Ensures the image fills the screen */
     background-repeat: no-repeat; /* No repeat of the background image */
     background-attachment: scroll; /* Allows scrolling */
     background-position: top; /* Ensure the image starts from the top */
+  }
+
+  .home-page {
+    background-image: url("images/home-page.png"); /* URL of the image */
+  }
+
+  .about-page {
+    background-image: url("images/about.png"); /* URL of the image */
+  }
+
+  .contact-page {
+    background-image: url("images/contact.png"); /* URL of the image */
+  }
+
+  .resources-page {
+    background-image: url("images/resources.png"); /* URL of the image */
+    background-size: contain;
+  }
+
+  .map-selection {
+    background-image: url("images/map-selection.png"); /* URL of the image */
+    /* height:100%; */
+    background-size: contain;
+  }
+
+  .map-page {
+    background-image: url("images/map.png"); /* URL of the image */
+  }
+
+  .safe-page {
+    background-image: url("images/safe.png"); /* URL of the image */
   }
   
   /* Center Button Styling */
@@ -73,5 +166,48 @@
   main {
     padding-top: 120px; /* Prevent overlapping with the fixed header */
     min-height: calc(100vh - 120px); /* Ensure at least full viewport height */
+  }
+  
+/* 404 Page  */
+/* 404 Page Styling */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: var(--fallback-color); /* Background matches fallback color */
+    text-align: center;
+  }
+  
+  .error-title {
+    font-size: 5rem;
+    color: #44731C; /* Green color for the error title */
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    font-size: 1.5rem;
+    color: #333; /* Darker color for the text message */
+    margin-bottom: 40px;
+  }
+  
+  /* Return Button Styling */
+  .return-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white; /* Text color */
+    background-color: #44731C; /* Main green color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .return-button:hover {
+    background-color: #49801A; /* Lighter green on hover */
   }
   
