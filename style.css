@@ -1,0 +1,77 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Shared Colors */
+  :root {
+    --fallback-color: #FAF3E5; /* Define the unified fallback color */
+  }
+  
+  /* Header Styling */
+  .pinned-header {
+    position: fixed; /* Pin header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125px; /* Adjust to match your header height */
+    z-index: 1000; /* Keep the header above all content */
+    background-color: var(--fallback-color); /* Use fallback color */
+  }
+  
+  .header-image {
+    width: 100%;
+    height: 100%; /* Ensures the header image fills the space */
+    object-fit: cover; /* Maintain image aspect ratio */
+  }
+  
+  /* Main Content Styling */
+  .content-wrapper {
+    position: relative;
+    min-height: 250vh; /* Example: Makes the page taller for scrolling */
+    width: 100%;
+    background-image: url("images/home-page.png"); /* URL of the image */
+    background-color: var(--fallback-color); /* Match fallback color */
+    background-size: cover; /* Ensures the image fills the screen */
+    background-repeat: no-repeat; /* No repeat of the background image */
+    background-attachment: scroll; /* Allows scrolling */
+    background-position: top; /* Ensure the image starts from the top */
+  }
+  
+  /* Center Button Styling */
+  .center-button {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 44px 152px;
+    font-size: 16px;
+    background-color: transparent;
+    color: transparent;
+    border: 1px #49801A;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  
+  .center-button:hover {
+    background-color: #49801A; 
+  } 
+  
+  /* Footer Styling */
+  footer {
+    width: 100%;
+    background-color: var(--fallback-color); /* Match fallback color */
+    text-align: center;
+    padding: 20px;
+    color: #000; /* Ensure sufficient contrast with light background */
+  }
+  
+  /* Main Content */
+  main {
+    padding-top: 120px; /* Prevent overlapping with the fixed header */
+    min-height: calc(100vh - 120px); /* Ensure at least full viewport height */
+  }
+  
